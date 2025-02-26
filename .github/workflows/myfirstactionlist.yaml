@@ -1,1 +1,12 @@
+name: Ping a Website on PR Open
 
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  ping-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Ping Request
+        run: curl -I https://www.example.com
